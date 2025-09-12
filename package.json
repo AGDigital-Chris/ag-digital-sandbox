@@ -1,0 +1,50 @@
+{
+  "name": "ag-digital-sandbox",
+  "version": "1.0.0",
+  "description": "AG Digital Sandbox - A showcase of coding tests and technical implementations",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx live-server --port=3000",
+    "build": "echo 'No build process needed for static site'",
+    "deploy": "gh-pages -d .",
+    "validate": "npx html-validate index.html",
+    "lighthouse": "npx lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html"
+  },
+  "keywords": [
+    "github-pages",
+    "portfolio",
+    "coding-tests",
+    "showcase",
+    "static-site",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "AGDigital-Chris",
+  "license": "MIT",
+  "homepage": "https://AGDigital-Chris.github.io/ag-digital-sandbox",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AGDigital-Chris/ag-digital-sandbox.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AGDigital-Chris/ag-digital-sandbox/issues"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.0.0",
+    "html-validate": "^8.7.4",
+    "live-server": "^1.2.2",
+    "lighthouse": "^11.4.0",
+    "serve": "^14.2.1"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
