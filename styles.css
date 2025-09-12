@@ -298,37 +298,60 @@ body {
 }
 
 .animated-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: var(--gradient-primary);
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 2rem;
-    font-weight: 600;
-    animation: pulse 2s infinite;
-    box-shadow: var(--shadow-md);
+    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+    border: 2px solid #e0e0e0;
+    border-radius: 25px;
+    padding: 12px 24px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: inline-block;
 }
 
-.animated-badge i {
-    animation: spin 2s linear infinite;
+.animated-badge::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 50%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(255, 0, 0, 0.6) 40%,
+        rgba(255, 255, 255, 0.8) 50%,
+        rgba(0, 100, 255, 0.6) 60%,
+        transparent 70%
+    );
+    transform: rotate(25deg);
+    animation: shine 3s ease-in-out infinite;
 }
 
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
+.ag-text {
+    color: #0066cc;
+    font-weight: 900;
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
     }
     50% {
-        transform: scale(1.05);
+        left: 100%;
+        opacity: 1;
     }
-}
-
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
+    100% {
+        left: 100%;
+        opacity: 0;
     }
 }
 
