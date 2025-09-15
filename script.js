@@ -76,9 +76,9 @@ function initScrollEffects() {
     // Observe project cards and sections
     const projectCards = document.querySelectorAll('.project-card');
     const aboutSection = document.querySelector('.about-text');
-    const contactSection = document.querySelector('.contact');
+    // const contactSection = document.querySelector('.contact');
     
-    [...projectCards, aboutSection, contactSection].forEach(el => {
+    [...projectCards, aboutSection].forEach(el => {
         if (el) observer.observe(el);
     });
 }
@@ -362,8 +362,7 @@ document.addEventListener('DOMContentLoaded', function() {
         '.nav-links',
         '.hero',
         '.projects',
-        '.about',
-        '.contact'
+        '.about'
     ];
     
     const missingElements = requiredElements.filter(selector => 
