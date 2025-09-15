@@ -24,10 +24,10 @@
         }
 
         .exclusive-badge {
-            background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+            background: #BF9B30;
             border: 2px solid #e0e0e0;
-            border-radius: 25px;
-            padding: 12px 24px;
+            border-radius: 2px;
+            padding: 0.25rem 0.5rem;
             font-weight: bold;
             font-size: 16px;
             color: #333;
@@ -39,7 +39,7 @@
             display: inline-block;
         }
 
-        .exclusive-badge::before {
+        .animated-badge::before {
             content: '';
             position: absolute;
             top: -50%;
@@ -49,9 +49,9 @@
             background: linear-gradient(
                 45deg,
                 transparent 30%,
-                rgba(255, 0, 0, 0.6) 40%,
-                rgba(255, 255, 255, 0.8) 50%,
-                rgba(0, 100, 255, 0.6) 60%,
+                #BF9B3099 40%,   /* base gold, 60% opacity */
+                #FFE8AACC 50%,   /* light golden highlight */
+                #8C6D2099 60%,   /* darker bronze shade */
                 transparent 70%
             );
             transform: rotate(25deg);
@@ -59,7 +59,7 @@
         }
 
         .ag-text {
-            color: #1e1e1e;
+            color: #0066cc;
             font-weight: 900;
         }
 
@@ -84,9 +84,9 @@
         .demo-section {
             text-align: center;
             margin: 20px 0;
-            padding: 8px;
+            padding: 20px;
             background: white;
-            border-radius: 2px;
+            border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             max-width: 600px;
         }
@@ -122,7 +122,7 @@
         }
 
         .code-snippet {
-            background: #1e1e1e;
+            background: #f8f9fa;
             border: 1px solid #e9ecef;
             border-radius: 8px;
             padding: 20px;
@@ -137,6 +137,10 @@
             margin-top: 0;
             color: #333;
             font-family: Arial, sans-serif;
+        }
+
+        .code-snippet code {
+            color: #333;
         }
 
         .variations {
@@ -181,13 +185,13 @@
     <div class="demo-section">
         <h1 class="demo-title">Animated Badge Demo</h1>
         <p class="demo-description">
-            Interactive demo of the "EXCLUSIVE TO ag" animated badge with shine effect. 
+            Interactive demo of the "ag EXCLUSIVE" animated badge with shine effect. 
             The badge features a smooth sweeping animation with blue and red gradient colors.
         </p>
 
         <div class="badge-container">
             <div class="exclusive-badge">
-                EXCLUSIVE TO <span class="ag-text">ag</span>
+                <span class="ag-text">ag</span> EXCLUSIVE
             </div>
         </div>
 
@@ -196,7 +200,7 @@
                 <h4>Original Design</h4>
                 <div class="badge-container">
                     <div class="exclusive-badge">
-                        EXCLUSIVE TO <span class="ag-text">ag</span>
+                        <span class="ag-text">ag</span> EXCLUSIVE
                     </div>
                 </div>
             </div>
@@ -205,7 +209,7 @@
                 <h4>Premium Version</h4>
                 <div class="badge-container">
                     <div class="exclusive-badge badge-premium">
-                        ag<span class="ag-text">EXCLUSIVE</span>
+                        <span class="ag-text">ag</span> EXCLUSIVE
                     </div>
                 </div>
             </div>
@@ -214,7 +218,7 @@
                 <h4>Success Version</h4>
                 <div class="badge-container">
                     <div class="exclusive-badge badge-success">
-                        EXCLUSIVE TO <span class="ag-text">ag</span>
+                        <span class="ag-text">ag</span> EXCLUSIVE
                     </div>
                 </div>
             </div>
@@ -223,7 +227,7 @@
                 <h4>Danger Version</h4>
                 <div class="badge-container">
                     <div class="exclusive-badge badge-danger">
-                        EXCLUSIVE TO <span class="ag-text">ag</span>
+                        <span class="ag-text">ag</span> EXCLUSIVE
                     </div>
                 </div>
             </div>
