@@ -298,7 +298,7 @@ body {
 }
 
 .animated-badge {
-    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+/*     background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%); */
     border: 2px solid #e0e0e0;
     border-radius: 25px;
     padding: 12px 24px;
