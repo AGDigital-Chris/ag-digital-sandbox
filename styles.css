@@ -298,18 +298,18 @@ body {
 }
 
 .animated-badge {
-/*     background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%); */
+    backgrond: #bf9b30;
     border: 2px solid #e0e0e0;
-    border-radius: 25px;
-    padding: 12px 24px;
+    border-radius: 2px;
+    padding: 0.25rem 0.5rem;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1rem;
     color: #333;
     text-transform: uppercase;
     letter-spacing: 1px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+/*     box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
     display: inline-block;
 }
 
@@ -323,9 +323,9 @@ body {
     background: linear-gradient(
         45deg,
         transparent 30%,
-        rgba(255, 0, 0, 0.6) 40%,
-        rgba(255, 255, 255, 0.8) 50%,
-        rgba(0, 100, 255, 0.6) 60%,
+        #BF9B3099 40%,   /* base gold, 60% opacity */
+        #FFE8AACC 50%,   /* light golden highlight */
+        #8C6D2099 60%,   /* darker bronze shade */
         transparent 70%
     );
     transform: rotate(25deg);
